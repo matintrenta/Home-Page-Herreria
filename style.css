@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     text-align: center;
-    color: whitesmoke;
+    color: rgb(224, 224, 224);
 }
 
 
@@ -20,10 +20,10 @@ nav{
     left: 0;
     height: 10vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-nav>div{
+nav div{
     margin: auto;
     width: 60%;
     height: 100%;
@@ -32,26 +32,34 @@ nav>div{
     align-items: center;
 }
 
-nav>div>h1{    
+nav h1{    
     color: white;
     text-shadow: 0 0px 3px rgb(26, 26, 26);
     /* padding-top: 5px; */
-    font-size: xx-large;
+    font-size: 2.5rem;
 }
 
-nav>div>a{
+nav span{
+     /*background: rgba(255, 217, 161, 0.527);
+    height: 50%; */
+    width: 30%;
+    align-content: center;    
+    padding: auto;
+}
+
+nav a{
     text-decoration: none;
-    text-shadow: 0 0px 2px rgb(51, 51, 51);
+    /* text-shadow: 0 0px 2px rgb(51, 51, 51); */
     transition: 0.2s;
-    color: white;
-    font-size: large;
-    
+    color: rgb(224, 224, 224);
+    font-size: 1.3rem;
 }
 
-nav>div>a:hover{
-     /*padding-bottom: 3px;
-    color: rgb(248, 248, 248);  */
-    text-shadow: 0 0px 5px rgb(51, 51, 51);
+nav a:hover{
+    padding-bottom: 3px;
+    color: rgb(255, 255, 255); 
+    /*font-size: 1.33rem; */
+    text-shadow: 0 0px 7px rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -67,12 +75,12 @@ nav>div>a:hover{
     background-image: url(./portada1.jpg);
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: 0 40%;
     background-blend-mode: overlay;
     /* */ background-color: rgba(0, 0, 0, 0.6);
 }
 
-.slider>h1{
+.slider h1{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -80,13 +88,24 @@ nav>div>a:hover{
     font-family: 'Roboto';
     font-weight: 400;
     letter-spacing: 7px;
-    text-shadow: 0 0 2px black;
+    text-shadow: -1px 2px 5px black;
+}
+
+.slider .arrow{
+    position: absolute;
+    bottom:5vh;
+    left: 50%;
+    height: 30px;
+    width: 30px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: translateX(-50%) rotate(45deg);
 }
 
 .presentacion{
     position: relative;
     height: 50vh;
-    /*background-color: rgb(255, 220, 62);*/
+    /**/background-color: whitesmoke;
     box-shadow: 0 5px 40px black;
 }
 
@@ -122,6 +141,7 @@ main{
     background: url(fondo-chapa.jpg) no-repeat;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.74);
+    background-size: cover;
 }
 
 h2{
@@ -152,34 +172,65 @@ h2{
 }
 
 .galeria>img{
-    width: 100%;
+    object-fit: cover;
     height: 100%;
+    width: 100%;
     border-radius: 10px;
+    box-shadow: 0 0 20px black;
+    background-size: cover;
+}
+/* 
+.galeria>div:nth-child(1){
+    grid-area: one;
+    background-image: url(./escalera.jpg);
 }
 
-.galeria>img:nth-child(1){
-    grid-area: one;
-    /* background-image: url(./escalera.jpg); */
-}
-.galeria>img:nth-child(2){
+.galeria>div:nth-child(2){
     grid-area: two;
-    /* background-image: url(./portada1.jpg); */
+    background-image: url(./portada1.jpg);
 }
-.galeria>img:nth-child(3){
+.galeria>div:nth-child(3){
     grid-area: three;
-    /* background-image: url(./estanteria.jpg); */
+    background-image: url(./estanteria.jpg);
 }
-.galeria>img:nth-child(4){
+.galeria>div:nth-child(4){
     grid-area: four;
-    /* background-image: url(./montacargas.jpg); */
+    background-image: url(./montacargas.jpg);
 }
-.galeria>img:nth-child(5){
+.galeria>div:nth-child(5){
     grid-area: five;
-    /* background-image: url(./porton.jpg); */
+    background-image: url(./porton.jpg);
 }
-.galeria>img:nth-child(6){
+.galeria>div:nth-child(6){
     grid-area: six;
-    /* background-image: url(./tinglado.jpg); */
+    background-image: url(./tinglado.jpg);
+} */
+
+
+.galeria>#i1{
+    grid-area: one;
+    background-image: url(./escalera.jpg);
+}
+
+.galeria>#i2{
+    grid-area: two;
+    background-image: url(./portada1.jpg);
+}
+.galeria>#i3{
+    grid-area: three;
+    background-image: url(./estanteria.jpg);
+}
+.galeria>#i4{
+    grid-area: four;
+    background-image: url(./montacargas.jpg);
+}
+.galeria>#i5{
+    grid-area: five;
+    background-image: url(./porton.jpg);
+}
+.galeria>#i6{
+    grid-area: six;
+    background-image: url(./tinglado.jpg);
 }
 
 
@@ -188,7 +239,7 @@ h2{
 
 
 #opiniones{
-    height: 80vh;
+    height: 90vh;
 }
 
 .cont-cards{
@@ -289,9 +340,9 @@ h2{
 /* FOOTER*/
 
 footer{
-    box-shadow: 0 -5px 20px black;
+    box-shadow: 0 -5px 20px rgb(10, 10, 10);
     height: 80vh;
-    /* */ background-color: rgb(32, 32, 32);
+    /* */ background-color: rgb(10, 10, 10);
 }
 
 footer>h2{
