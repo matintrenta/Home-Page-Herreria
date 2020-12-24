@@ -1,12 +1,12 @@
-*{
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-align: center;
     color: rgb(224, 224, 224);
 }
-
-
 
 
 
@@ -20,7 +20,7 @@ nav{
     left: 0;
     height: 10vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0);
 }
 
 nav div{
@@ -151,34 +151,43 @@ h2{
 }
 
 #trabajos{
-    height: 100vh;
-    /* background-color: gray; */
+    /*background-color: gray; */height: 90vh;
+     
 }
 
 .galeria{
-    min-height: 80%;
+    min-height: 60%;
     width: fit-content;
     margin: auto;    
     margin-top: 5vh;
     padding: auto;
     display: grid;
     grid-template-columns: repeat(5, 15vw);
-    grid-template-rows: repeat(2, 15vw);
-    grid-template-areas:    
-    'one two two three four'
-    'one five six six four';
+    grid-template-rows: repeat(3, 15vw);
+    /**/grid-template-areas:    
+    'one two two tre four'
+    'one fiv six six four';
+      /*grid-template-areas:    
+    'one two two tre ten'
+    'one fiv six six four'
+    'sev eit eit nin four';
     grid-gap: 1rem;
-    /* background-color: rgb(82, 207, 43, 0.5); */
+     background-color: rgb(82, 207, 43, 0.5); */
 }
 
 .galeria>img{
     object-fit: cover;
     height: 100%;
     width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0 20px black;
+    /* border-radius: 10px;
+    box-shadow: 0 5px 15px black; */
     background-size: cover;
 }
+.galeria>img:hover{
+    cursor: pointer;
+}
+
+
 /* 
 .galeria>div:nth-child(1){
     grid-area: one;
@@ -209,28 +218,44 @@ h2{
 
 .galeria>#i1{
     grid-area: one;
-    background-image: url(./escalera.jpg);
+    /* background-image: url(./escalera.jpg); */
 }
 
 .galeria>#i2{
     grid-area: two;
-    background-image: url(./portada1.jpg);
+    /* background-image: url(./portada1.jpg); */
 }
 .galeria>#i3{
-    grid-area: three;
-    background-image: url(./estanteria.jpg);
+    grid-area: tre;
+    /* background-image: url(./estanteria.jpg); */
 }
 .galeria>#i4{
     grid-area: four;
-    background-image: url(./montacargas.jpg);
+    /* background-image: url(./montacargas.jpg); */
 }
 .galeria>#i5{
-    grid-area: five;
-    background-image: url(./porton.jpg);
+    grid-area: fiv;
+    /* background-image: url(./porton.jpg); */
 }
 .galeria>#i6{
     grid-area: six;
-    background-image: url(./tinglado.jpg);
+    /* background-image: url(./tinglado.jpg); */
+}
+.galeria>#i7{
+    grid-area: sev;
+    /* background-color: rgb(130, 132, 238); */
+}
+.galeria>#i8{
+    grid-area: eit;
+    /* background-color: rgb(173, 238, 130); */
+}
+.galeria>#i9{
+    grid-area: nin;
+    /* background-color: rgb(238, 209, 130); */
+}
+.galeria>#i10{
+    grid-area: ten;
+    /* background-color: rgb(195, 130, 238); */
 }
 
 
@@ -244,8 +269,10 @@ h2{
 
 .cont-cards{
     /* padding: 10vh; */
-    width: 100%;
+    
+    width: 90%;
     height: 80%;
+    margin: auto;
     display: flex;
      /*  justify-content: center;
    background-color: rgba(255, 145, 145, 0.445);*/
@@ -259,7 +286,7 @@ h2{
     /**/ padding: 25px; 
     border-radius: 20px;
     background-color: rgb(246, 246, 246);
-    box-shadow: 0 10px 15px black;
+    box-shadow: 0 5px 15px black;
     transition: 0.3s;
     display: flex;
     flex-direction: column;
@@ -341,10 +368,105 @@ h2{
 
 footer{
     box-shadow: 0 -5px 20px rgb(10, 10, 10);
-    height: 80vh;
+    padding: 0 5vw;
     /* */ background-color: rgb(10, 10, 10);
 }
 
 footer>h2{
-    padding-top: 20px;
+    padding-top: 30px;
+}
+
+footer>#cont-foot{
+    height: 90vh;   
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.socialm{
+    height: 45%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: violet; */
+    cursor: pointer;
+}
+
+.iconos{
+    height: 100px;
+    width: 100px;
+}
+
+.socialm>a{
+    text-decoration: none;
+    font-size: x-large;
+}
+
+#linkedin{    
+    background-color: white;
+    border-radius: 15px;
+}
+
+.form-consulta{
+    height: 85%;
+    width: 40%;
+    /* padding: 0 5% 5% 5% ; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(192, 192, 192);
+    border-radius: 15px;
+}
+
+#gmail{
+    /* box-sizing: border-box;
+    text-shadow: 0 0 10px tomato; */
+}
+
+.datos{
+    border: none;
+    height: 2rem;
+    width: 70%;
+    border-radius: 7px;
+    color: black;
+    transition: 180ms box-shadow ease-in-out;
+    resize: vertical;
+}
+
+.datos:focus{
+    box-shadow: 0 0 0 2px rgb(93, 93, 93, 0.4);
+    outline: 3px solid transparent;
+}
+
+.consulta{
+    border: none;
+    height: 30%;
+    width: 70%;
+    border-radius: 7px;
+    color: black;
+    text-align: start;
+    font-family: 'Roboto';
+    padding: 10px;
+    /* text-indent: 0.5rem; */
+}
+
+.send-btn{
+    height: 3rem;
+    width: 50%;
+    border: none;
+    border-radius: 7px;
+    font-size: 1em;
+    font-weight: 500;
+    color: white;
+    background: rgb(70, 199, 19);
+    transition: 10ms ;
+}
+
+.send-btn:focus{    
+    /*box-shadow: 0 0 0 2px rgb(93, 93, 93, 0.4); */
+    outline: 0 solid transparent;
+    background: rgb(103, 211, 61);
 }
