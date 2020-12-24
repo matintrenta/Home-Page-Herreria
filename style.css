@@ -420,12 +420,12 @@ footer>#cont-foot{
     background: rgb(192, 192, 192);
     border-radius: 15px;
 }
-
+/* 
 #gmail{
-    /* box-sizing: border-box;
-    text-shadow: 0 0 10px tomato; */
+    box-sizing: border-box;
+    text-shadow: 0 0 10px tomato; 
 }
-
+*/
 .datos{
     border: none;
     height: 2rem;
