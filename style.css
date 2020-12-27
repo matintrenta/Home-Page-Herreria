@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     text-align: center;
-    color: rgb(224, 224, 224);
+    color: rgb(230, 230, 230);
 }
 
 
@@ -146,8 +146,10 @@ main{
 
 h2{
     text-shadow: -3px 5px 5px rgb(0, 0, 0);
-    padding-top: 5%; 
-    font-size: xx-large;
+    padding-top: 5%;
+    font-weight: 500; 
+    font-size: 2.5em;
+    letter-spacing: 2px;
 }
 
 #trabajos{
@@ -191,6 +193,7 @@ h2{
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 5px 15px black;
+    cursor: pointer;
 }
 
 .galery-item .galery-img{
@@ -356,10 +359,11 @@ footer>h2{
 }
 
 footer>#cont-foot{
-    height: 90vh;   
+    /*  */ height: 70vh;  
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-bottom: 10vh;
 }
 
 .socialm{
