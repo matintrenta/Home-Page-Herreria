@@ -72,7 +72,7 @@ nav a:hover{
 .slider{
     position: static;
     height: 100vh;
-    background-image: url(./portada1.jpg);
+    background-image: url(./imagenes/portada1.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: 0 40%;
@@ -138,7 +138,7 @@ nav a:hover{
 /*MAIN*/
 
 main{
-    background: url(fondo-chapa.jpg) no-repeat;
+    background: url(./imagenes/fondo-chapa.jpg) no-repeat;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.74);
     background-size: cover;
@@ -390,8 +390,8 @@ footer>#cont-foot{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* background-color: violet; */
     cursor: pointer;
+    /* background-color: violet; */
 }
 
 .iconos{
@@ -465,7 +465,7 @@ footer>#cont-foot{
     transition: 10ms ;
 }
 
-.send-btn:focus{    
+.send-btn:focus{
     /*box-shadow: 0 0 0 2px rgb(93, 93, 93, 0.4); */
     outline: 0 solid transparent;
     background: rgb(103, 211, 61);
