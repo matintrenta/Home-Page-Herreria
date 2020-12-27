@@ -155,107 +155,86 @@ h2{
      
 }
 
-.galeria{
-    min-height: 60%;
-    width: fit-content;
-    margin: auto;    
-    margin-top: 5vh;
-    padding: auto;
-    display: grid;
-    grid-template-columns: repeat(5, 15vw);
-    grid-template-rows: repeat(3, 15vw);
-    /**/grid-template-areas:    
-    'one two two tre four'
-    'one fiv six six four';
-      /*grid-template-areas:    
-    'one two two tre ten'
-    'one fiv six six four'
-    'sev eit eit nin four';
-    grid-gap: 1rem;
-     background-color: rgb(82, 207, 43, 0.5); */
+.galery-item:nth-child(1){
+    grid-area: one;
+}
+.galery-item:nth-child(2){
+    grid-area: two;
+}
+.galery-item:nth-child(3){
+    grid-area: tre;
+}
+.galery-item:nth-child(4){
+    grid-area: fou;
+}
+.galery-item:nth-child(5){
+    grid-area: fiv;
+}
+.galery-item:nth-child(6){
+    grid-area: six;
 }
 
-.galeria>img{
-    object-fit: cover;
+.galery{
+    margin: 5vh auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 210px;
+    grid-template-areas:'one two two tre fou'
+                        'one six fiv fiv fou';
+    grid-gap: 1em;
+}
+
+.galery-item{
+    position: relative;
+    background-color: rgba(39, 39, 39, 0.486);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px black;
+}
+
+.galery-item .galery-img{
+    transition: .5s;
     height: 100%;
     width: 100%;
-    /* border-radius: 10px;
-    box-shadow: 0 5px 15px black; */
-    background-size: cover;
+    object-fit: cover;
 }
-.galeria>img:hover{
-    cursor: pointer;
+.galery-item:hover .galery-img{    
+    transform: scale(1.1);
 }
 
+.galery-item .ventana{
 
-/* 
-.galeria>div:nth-child(1){
-    grid-area: one;
-    background-image: url(./escalera.jpg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 41, 41, 0.37);
+    transition: 1s;
 }
-
-.galeria>div:nth-child(2){
-    grid-area: two;
-    background-image: url(./portada1.jpg);
-}
-.galeria>div:nth-child(3){
-    grid-area: three;
-    background-image: url(./estanteria.jpg);
-}
-.galeria>div:nth-child(4){
-    grid-area: four;
-    background-image: url(./montacargas.jpg);
-}
-.galeria>div:nth-child(5){
-    grid-area: five;
-    background-image: url(./porton.jpg);
-}
-.galeria>div:nth-child(6){
-    grid-area: six;
-    background-image: url(./tinglado.jpg);
-} */
-
-
-.galeria>#i1{
-    grid-area: one;
-    /* background-image: url(./escalera.jpg); */
+.galery-item:hover .ventana{
+    transition: .5s;
+    height: 0; 
+    background-color: transparent;
+    color: transparent;
 }
 
-.galeria>#i2{
-    grid-area: two;
-    /* background-image: url(./portada1.jpg); */
+.galery-item .ventana p{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    font-weight: 300;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0);
+    transition: .5s;
 }
-.galeria>#i3{
-    grid-area: tre;
-    /* background-image: url(./estanteria.jpg); */
-}
-.galeria>#i4{
-    grid-area: four;
-    /* background-image: url(./montacargas.jpg); */
-}
-.galeria>#i5{
-    grid-area: fiv;
-    /* background-image: url(./porton.jpg); */
-}
-.galeria>#i6{
-    grid-area: six;
-    /* background-image: url(./tinglado.jpg); */
-}
-.galeria>#i7{
-    grid-area: sev;
-    /* background-color: rgb(130, 132, 238); */
-}
-.galeria>#i8{
-    grid-area: eit;
-    /* background-color: rgb(173, 238, 130); */
-}
-.galeria>#i9{
-    grid-area: nin;
-    /* background-color: rgb(238, 209, 130); */
-}
-.galeria>#i10{
-    grid-area: ten;
-    /* background-color: rgb(195, 130, 238); */
+
+.galery-item:hover .ventana p{
+    color: transparent;
+    text-shadow: none;
 }
 
 
@@ -469,4 +448,19 @@ footer>#cont-foot{
     /*box-shadow: 0 0 0 2px rgb(93, 93, 93, 0.4); */
     outline: 0 solid transparent;
     background: rgb(103, 211, 61);
+}
+
+
+
+@media screen and (min-width: 360px){
+    .galery{
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-auto-rows: 150px; */
+    }
+}
+
+@media screen and (min-width: 810px){
+    .galery{
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
