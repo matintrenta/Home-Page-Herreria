@@ -2,117 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">   
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
-    <title></title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="cards.css">
+    <title>Document</title>
 </head>
 <body>
-
-    <nav>
-        <div>
-            <span> <a href="#trabajos"> Trabajos Realizados </a> </span>
-            <h1 id="logo"> Herrería </h1>
-            <span> <a href="#datos"> Datos de Contacto </a> </span>
-        </div>
-    </nav>
-
+    
     <header>
-        <!--Portada y Presentacion(de texto)-->
+        <nav>
+            <h1>Logo</h1>
+            <img class="menu-toggler-img" src="./imagenes/menu.png"alt="">
+        </nav>
         <div class="slider">
-            <!-- <div></div> -->
-            <h1> las mejores parrillas </h1>
-            <div class="arrow"></div>
+            <div class="caption center">
+                <h1 class="center">las mejores parrillas</h1>
+            </div>            
         </div>
-        <div class="presentacion">
-            <div class="text">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus omnis molestias distinctio voluptatem laborum perferendis rem nostrum facere ea, ipsum animi consequatur repellat illo magnam numquam dolorum natus doloribus porro?
-                Odio harum sed eius debitis similique veritatis temporibus tempora laudantium excepturi amet, itaque quia nostrum eum quisquam facere reprehenderit? Odio aliquid eligendi nihil commodi. Dolorum ad nemo incidunt nam tempore.</p>
-                <h4>Firma</h4>
+        <div class="about-us">
+            
+            <div class="context">
+                <h1>Quienes somos y qué hacemos</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quasi tenetur illum itaque soluta modi possimus dolorum, iure dolorem necessitati bus est natus ex quos nobis labore laboriosam eveniet eum omnis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quae repudiandae ex expedita, debitis, consequatur quidem sunt, sint neque dolor quibusdam. Animi facere nobis amet dolor sed iste fugiat!</p>
+                <h4>Aclaracion</h4>
             </div>
         </div>
     </header>
 
     <main>
-        <section id="trabajos">
-            <a name="trabajos"> <h2 class="titulo" >Nuestro trabajo </h2></a>
-
-            <div class="galery">
-                 <!----> <div class="galery-item">
-                    <img  class="galery-img" src="./imagenes/escalera.jpg" alt="">
-                    <div class="ventana"><p>Escalera</p></div>
-                </div> 
-                <div class="galery-item">
-                    <!----> <img  class="galery-img" src="./imagenes/portada1.jpg" alt=""> 
-                    <div class="ventana"><p>Parrillas</p></div>
-                </div>
-                <div class="galery-item">
-                    <!----> <img  class="galery-img" src="./imagenes/estanteria.jpg" alt=""> 
-                    <div class="ventana"><p>Estanterías</p></div>
-                </div>
-                 <div class="galery-item">
-                    <img  class="galery-img" src="./imagenes/montacargas.jpg" alt="">
-                    <div class="ventana"><p>Montacargas</p></div>
-                </div>
-                <div class="galery-item">
-                    <img  class="galery-img" src="./imagenes/porton.jpg" alt="">
-                    <div class="ventana"><p>Portones</p></div>
-                </div>
-                <div class="galery-item">
-                    <img  class="galery-img" src="./imagenes/tinglado.jpg" alt="">
-                    <div class="ventana"><p>Tinglados</p></div>
+        <section >
+            <div class="gallery-cont">
+                <h1 class="title" >Algunos Trabajos</h1>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img  class="gallery-img" src="./imagenes/escalera.jpg" alt="">
+                        <div class="ventana"><p>Escaleras</p></div>
+                    </div> 
+                    <div class="gallery-item">
+                        <img  class="gallery-img" src="./imagenes/portada1.jpg" alt=""> 
+                        <div class="ventana"><p>Parrillas</p></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img  class="gallery-img" src="./imagenes/estanteria.jpg" alt=""> 
+                        <div class="ventana"><p>Estanterías</p></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img  class="gallery-img" src="./imagenes/montacargas.jpg" alt="">
+                        <div class="ventana"><p>Montacargas</p></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img  class="gallery-img" src="./imagenes/porton.jpg" alt="">
+                        <div class="ventana"><p>Portones</p></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img  class="gallery-img" src="./imagenes/tinglado.jpg" alt="">
+                        <div class="ventana"><p>Tinglados</p></div>
+                    </div>
                 </div>
             </div>
-
         </section>
-
-        <section id="opiniones">
-            <h2 class="titulo" > Qué opinan los clientes </h2>
-
-            <div class="cont-cards">
-                <div class="card card-n1"> 
+        <section class="cards-cont">
+            <h1 class="title" >Nuestros Clientes</h1>
+            <div class="cards">
+                <div class="card-item">
                     <img src="./imagenes/perfil1.jpg" alt="">
-                    <span>
-                        <img src="./imagenes/instagram1.png" alt="">
-                        <a href="http://">@inst.profile</a>
-                    </span>
+                    <a href="http://">
+                            <img src="./imagenes/instagram1.png" alt="">
+                            <p>@inst.profile</p>
+                    </a>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, minus fugit recusandae voluptas ex hic architecto eos officiis dolorem nobis tenetur aliquam maiores amet quia esse nulla.</p>
                 </div>
-                <div class="card card-n2"> 
+                <div class="card-item">
                     <img src="./imagenes/perfil2.jpeg" alt="">
-                    <span>
-                        <img src="./imagenes/instagram1.png" alt="">
-                        <a href="http://">@inst.profile</a>
-                    </span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, minus fugit recusandae voluptas ex hic architecto eos.</p>
+                    <a href="http://">
+                            <img src="./imagenes/instagram1.png" alt="">
+                            <p>@inst.profile</p>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, minus fugit recusandae voluptas ex hic architecto eos officiis dolorem nobis tenetur aliquam maiores amet quia esse nulla. eos officiis dolorem nobis tenetur aliquam maiores amet quia esse nulla.</p>
                 </div>
-                <div class="card card-n3"> 
+                <div class="card-item">
                     <img src="./imagenes/perfil3.jpg" alt="">
-                    <span>
-                        <img src="./imagenes/instagram1.png" alt="">
-                        <a href="http://">@inst.profile</a>
-                    </span>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, minus fugit recusandae voluptas ex hic architecto eos officiis dolorem nobis tenetur aliquam.
+                    <a href="http://">
+                            <img src="./imagenes/instagram1.png" alt="">
+                            <p>@inst.profile</p>
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, minus fugit recusandae voluptas ex hic architecto eos officiis dolorem nobis tenetur aliquam maiores amet quia esse nulla.eos officiis dolorem nobis.</p>
+                </div>
             </div>
-
         </section>
     </main>
-
-    <footer>
-
-        <a name="datos"> <h2 class="titulo" >Contacto</h2> </a>
-
+    <footer>        
+        <a name="datos"> <h2 class="title" >Contacto</h2> </a>
         <div id="cont-foot" >
 
             <div class="socialm" >
                 <img class="iconos" id="linkedin" src="./imagenes/linkedin.png" alt="">
-                <a href="">linkedin.herreria</a>
+                <a href="">linkedin.profile</a>
             </div>
             <div class="socialm" >
                 <img class="iconos" src="./imagenes/instagram.png" alt="">
-                <a href="">instagram.herreria</a>
+                <a href="">instagram.profile</a>
             </div>
             <div class="socialm" >
                 <img class="iconos" src="./imagenes/whatsapp.png" alt="">
@@ -120,7 +110,7 @@
             </div>
             <div class="socialm" >
                 <img class="iconos" src="./imagenes/gmail.png" alt="">
-                <a href="">herreria@gmail.com</a>
+                <a href="">correo@gmail.com</a>
             </div>
 
             <!--
@@ -137,6 +127,5 @@
             
         </div>
     </footer>
-    
 </body>
 </html>
