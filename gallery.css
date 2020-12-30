@@ -23,7 +23,7 @@
 
         .gallery-item{
             position: relative;
-            border-radius: 2vw;
+            border-radius: 1vw;
             overflow: hidden;
             box-shadow: 0 5px 15px black;
         }

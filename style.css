@@ -23,8 +23,9 @@
 
 
 
-/* header{} */
-
+header{
+    box-shadow: 0 0 3.5vh black;
+} /* */
     nav{
         position: fixed;
         top: 0;
@@ -38,7 +39,7 @@
         justify-content: space-between;
         align-items: center;
         background: rgba(0, 0, 0);
-        box-shadow: 0 0 20px black;
+        box-shadow: 0 0 3.5vh black;
     }
         nav h1{
             letter-spacing: 3px;
@@ -47,8 +48,10 @@
         }
         .menu-toggler-img{
             height: 5vh;
-            background-color: yellowgreen;
-        } 
+        }
+        .nav-links{
+            display: none;
+        }
 
     .slider{
         width: 100vw;
@@ -77,15 +80,12 @@
         background-color: #f5f5f5;
         display: flex;
     }
-
         .context{
-            width: 90%;
-            /* max-width: 400px; */
+            width: 85%;
             margin: auto;
-            /* background-color: #aaf3f3 */
         }
         .context h1{
-            font-size: calc(3vh + 1vw);
+            font-size: calc(4vh + 1vw);
             margin-bottom: 1.2em;
             text-align: center;
             line-height: 1.4em;
@@ -101,7 +101,7 @@
             position: relative;
             left: -10%;
             text-align: right;
-            font-size: 1.6em;
+            font-size: 3.4vh;
         }
 
 
@@ -152,9 +152,10 @@ footer{
     }
 
         .socialm{
-            height: 35%;
+            height: 30%;
             width: 20%;
-            padding: 10% 0;
+            padding: 5% 0;
+            margin: 3vw;
             min-width: 200px;
             text-align: center;
             cursor: pointer;
@@ -208,49 +209,20 @@ footer{
     .card-item{
         width: 85%;
         max-width: 270px;
-        min-width: 200px;
-        margin: 3vw 2vw;
         padding: 4vh 1.5vw;
         padding-bottom: 3vh;
-        border-radius: 20px;
-        background-color: rgb(246, 246, 246);
-        box-shadow: 0 7px 10px rgb(37, 37, 37);
-        transition: 0.3s;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        
     }
         .card-item>p{
             margin: 3vh 0;
             max-width: 70%;
-            text-align: left;
-            text-indent: 1em;
         }
-        .card-item>img{
-            height: 60px;
-            width: 60px; 
-            border: 3px solid rgb(211, 211, 211);
-            border-radius: 100%;
-        }
-        .card-item>a{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-            .card-item>a>img{
-                height: 25px;
-                margin: 7px;
-            }
-            .card-item>a>p{
-                color: cornflowerblue;
-            }  
 }
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px){    
     .cards{
         width: 90%;
     }
@@ -262,6 +234,34 @@ footer{
 
 
 @media only screen and (min-width: 768px) {
+    nav{
+        padding: 0;
+        justify-content: center;
+    }
+        nav h1{            
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .menu-toggler-img{
+            display: none;
+        }
+        .nav-links{
+            display: block;
+            text-align: center;
+            white-space: nowrap;
+            text-decoration: none;
+            font-size: 3vh;
+            color: #fafafa;
+            /* background-color: cadetblue; */
+        }
+
+    .socialm{        
+        margin: 5vh;
+    }
+        
+
     .gallery{        
         grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: .25fr;
@@ -270,9 +270,7 @@ footer{
                             'one six six six';
         overflow: hidden;
     }
-    .context{
-        max-width: none;
-    }
+
     .cards{
         width: 90%;
     }
@@ -283,14 +281,9 @@ footer{
         #last-card{
             display: block;
         }
-    /* .title{
-        font-size: 2.5em;
-    } */
 }
 
-/* Medium devices (landscape tablets, 768px and up) 
-@media only screen and (min-width: 768px) {...}
-*/
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .gallery{        
@@ -298,15 +291,12 @@ footer{
         grid-auto-rows: .4fr;
         grid-template-areas:'one two two tre fou'
                             'one fiv six six fou';
-        overflow: hidden;
-    }
-    .context{
-        max-width: none;
     }
     .socialm{
-        height: 25%;
-        padding: 5% 0;
+        height: 20%;
         width: 20%;
+        padding: 5% 0;
+        margin: 2vh;
     }
     .cards{
         width: 100%;
@@ -317,43 +307,23 @@ footer{
     .card-item{
         width:24%;
         max-width: 300px;
-        min-width: 200px;
-        margin: 3vw 2vw;
-        padding: 2vh 1.5vw;
-        padding-bottom: 3vh;
-        border-radius: 20px;
+        border-radius: 2vh;
         background-color: rgb(246, 246, 246);
-        box-shadow: 0 7px 10px rgb(37, 37, 37);
-        transition: 0.3s;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        box-shadow: 0 1.5vh 2vh rgb(37, 37, 37);
+        
     }
         .card-item>p{
-            margin: 2vh;
             max-width: 85%;
-            text-align: left;
-            text-indent: 1em;
         }
         .card-item>img{
             height: 8vh;
             width: 8vh;
             border: .2vw solid rgb(211, 211, 211);
-            border-radius: 100%;
-        }
-        .card-item>a{
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
             .card-item>a>img{
                 height: 5vh;
                 margin: 1vw;
             }
-            .card-item>a>p{
-                color: cornflowerblue;
-            }  
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up)  {...}*/

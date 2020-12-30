@@ -10,11 +10,10 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        /* */ background-color: rgba(220, 20, 60, 0.486);
     }    
-        #last-card{
-            /* display: none; */
-        }
+        /*#last-card{
+             display: none; 
+        }*/
         .card-item{
             width: 100%;
             max-width: 270px;
@@ -33,7 +32,7 @@
         }
             .card-item>p{
                 margin: 2vh;
-                max-width: 85%;
+                max-width: 80%;
                 text-align: left;
                 text-indent: 1em;
             }
