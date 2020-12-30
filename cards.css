@@ -5,15 +5,17 @@
     .cards{
         color: #111;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         /* background-color: rgba(220, 20, 60, 0.486); */
     }    
         .card-item{
-            width: 30%;
-            min-width: 250px;
+            width: 80%;
+            max-width: 270px;
+            min-width: 200px;
             margin: 10px 0;
-            padding: 25px;  
+            padding: 25px 15px;
+            padding-bottom: 45px;
             border-radius: 20px;
             background-color: rgb(246, 246, 246);
             box-shadow: 0 7px 10px rgb(37, 37, 37);
@@ -23,6 +25,9 @@
             justify-content: flex-start;
             align-items: center;
         }
+            .card-item>p{
+                max-width: 85%;
+            }
             .card-item>img{
                 height: 60px;
                 width: 60px; 
