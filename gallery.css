@@ -2,14 +2,10 @@
     padding: 7.5% 0;
     margin: auto;
     width: 85%;
-    /* max-width: 350px;
-    max-height: 90vh; */
     height: fit-content;
-    /* background-color: rgba(233, 170, 97, 0.5); */
 }
 
     .gallery{
-        /*background-color: rgba(145, 97, 233, 0.5); */
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: 35vw;
@@ -18,7 +14,7 @@
                             'one fou'
                             'tre fou'
                             'six six';
-        gap: 1vw;/*  */
+        gap: 1vw;
     }
 
         .gallery-item{
@@ -34,7 +30,6 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                /* transform: translateY(-50%); */
                 font-size: 2.7vh;
                 color: white;
                 background-color: rgba(0, 0, 0, 0.4);
