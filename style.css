@@ -58,25 +58,87 @@ header{
                 display: none;
             }
 
-    .slider{
+    .slider-cont{
         width: 100vw;
         height: 100vh;
-        background-color: rgb(0, 164, 170); /* */        
     }
+        .window{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+            .slider{
+                width: 400%;
+                height: 100%;
+                display: flex;
+                transition: .3s;
+            }
+                .show{
+                    background-image: url(./imagenes/wp2.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    height: 100%;
+                    width: 25%;
+                    position: relative;
+                }
+                .show:nth-child(2){
+                    background-image: url(./imagenes/portada1.jpg);
+                    background-position: 45% 20%;
+                }
+                .show:nth-child(3){
+                    background-image: url(./imagenes/wp3.jpg);
+                    background-position: 50% 0%;
+                } /* */
         .caption{
             height: 40%;
             max-width: 75%;
             text-align: center;
+            top: 55%;
+            padding: 3%;
             align-items: center;
-            border-top: 2px solid white;
-            border-bottom: 2px solid white;
+            background-color: rgba(0, 0, 0, 0.45); /* */
+            backdrop-filter: blur(7px);
+            background-size: scale(2);
+            border: 2px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
         }
             .caption h1{
                 padding: 20% auto;
                 color: white;
-                font-size: 2.5em;
+                font-family: 'Roboto';
+                font-size: 7vh;
+                font-weight: 300;
+                letter-spacing: .5vw;
                 line-height: 2em;
+                text-shadow: 0 5px 10px black ;
+                /* background-color: rgba(0, 4, 255, 0.4); */
             }
+        #arrow-left{
+            height: 5vh;
+            width: 5vh;
+            position: absolute;
+            top: 55%;
+            left: 5%;
+            border-left: 5px solid white;
+            border-bottom: 5px solid white;
+            transform: translateY(-50%) rotate(45deg);
+            /* background-color: #00000050; */
+            cursor: pointer;
+        }
+        #arrow-right{
+            height: 5vh;
+            width: 5vh;
+            position: absolute;
+            top: 55%;
+            right: 5%;
+            border-right: 5px solid white;
+            border-bottom: 5px solid rgb(187, 153, 153);
+            transform: translateY(-50%) rotate(-45deg);
+            /* background-color: #00000050; */
+            cursor: pointer;
+        }
 
     .about-us{
         width: 100%;
@@ -130,15 +192,15 @@ main{
         height: fit-content;
         width: 100vw;
     }
-        
+
     /*
-     
+
            gallery y cards
          en archivos a parte
-     
+
      */
 
-    
+
 
 footer{
     bottom: 0;
@@ -164,11 +226,11 @@ footer{
             min-width: 200px;
             text-align: center;
             cursor: pointer;
-            /*background-color: violet; */ 
+            /*background-color: violet; */
         }
 
             .iconos{
-                height: calc(10vh + 5vw);                
+                height: calc(10vh + 5vw);
             }
 
             .socialm>a{
@@ -182,7 +244,7 @@ footer{
                 /* background-color: yellow; */
             }
 
-            #linkedin{    
+            #linkedin{
                 background-color: white;
                 border-radius: 15px;
             }
@@ -210,7 +272,7 @@ footer{
 
 
 @media only screen and (min-width: 425px) {
-    .gallery{        
+    .gallery{
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: .4fr;
         grid-template-areas:'two two fou'
@@ -226,7 +288,7 @@ footer{
         max-width: 270px;
         padding: 4vh 1.5vw;
         padding-bottom: 3vh;
-        
+
     }
         .card-item>p{
             margin: 3vh 0;
@@ -237,12 +299,12 @@ footer{
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
-@media only screen and (min-width: 600px){    
+@media only screen and (min-width: 600px){
     .cards{
         width: 90%;
     }
-        .card-item{    
-            width: 45%;        
+        .card-item{
+            width: 45%;
             max-width: 300px;
         }
 }
@@ -250,11 +312,11 @@ footer{
 
 @media only screen and (min-width: 768px) {
 
-    .socialm{        
+    .socialm{
         margin: 5vh;
     }
-    
-    .gallery{        
+
+    .gallery{
         grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: .25fr;
         grid-template-areas:'two two two fou'
@@ -266,12 +328,12 @@ footer{
     .cards{
         width: 90%;
     }
-        .card-item{    
-            width: 45%;        
+        .card-item{
+            width: 45%;
             max-width: 350px;
         }
         #last-card{
-            display: block;
+            display: flex;
         }
 }
 
@@ -282,8 +344,8 @@ footer{
         padding: 0;
         justify-content: center;
     }
-        nav h1{
-        }
+        /* nav h1{
+        } */
         .menu-toggler-img{
             display: none;
         }
@@ -307,7 +369,7 @@ footer{
                 text-align: left;
             }
 
-    .gallery{        
+    .gallery{
         grid-template-columns: repeat(5, 1fr);
         grid-auto-rows: .4fr;
         grid-template-areas:'one two two tre fou'
@@ -325,7 +387,7 @@ footer{
 
         .socialm>a{
             margin-top: 1vh;
-            font-size: 2.8vh;
+            font-size: 3vh;
         }
 
     .cards{
@@ -340,7 +402,7 @@ footer{
         border-radius: 2vh;
         background-color: rgb(246, 246, 246);
         box-shadow: 0 1.5vh 2vh rgb(37, 37, 37);
-        
+
     }
         .card-item>p{
             max-width: 85%;
@@ -351,19 +413,20 @@ footer{
             border: .2vw solid rgb(211, 211, 211);
         }
             .card-item>a>img{
-                height: 5vh;
-                margin: 1vw;
+                height: 3vh;
+                margin: .5vw;
             }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up)  {...}*/
 @media only screen and (min-width: 1200px){
     #last-card{
-        display: block;
-    }    
+        display: flex;
+    }
     .card-item{
-        width:20%;
+        width: 20%;
         max-width: none;
         font-size: calc(1vh + .5vw);
     }
+
 }

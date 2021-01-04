@@ -11,9 +11,13 @@
         justify-content: center;
         flex-wrap: wrap;
     }    
-        /*#last-card{
-             display: none; 
-        }*/
+        #last-card{                
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: left;
+        }/**/
         .card-item{
             width: 100%;
             max-width: 270px;
@@ -29,6 +33,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            text-align: left;
         }
             .card-item>p{
                 margin: 2vh;

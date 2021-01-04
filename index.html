@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="cards.css">
     <!-- <link rel="stylesheet" href="responsive.css"> -->
@@ -13,16 +16,26 @@
     
     <header>
         <nav>
-                <div><a class="nav-links" href="">Trabajos Realizados</a></div>
+                <div><a class="nav-links" href="#trabajos">Trabajos Realizados</a></div>
                 <h1 >Herreria</h1>
-                <div><a id="right-link" class="nav-links" href="">Cómo Contactarnos</a></div>
+                <div><a id="right-link" class="nav-links" href="#datos">Cómo Contactarnos</a></div>
                 <img class="menu-toggler-img" src="./imagenes/menu.png"alt="">
             
         </nav>
-        <div class="slider">
-            <div class="caption center">
-                <h1 class="center">las mejores parrillas</h1>
-            </div>            
+        <div class="slider-cont">
+            <div class="center window ">
+                <div class="slider">
+                    <div class="show"></div>
+                    <div class="show"></div>
+                    <div class="show"></div>
+                    <div class="show"></div>
+                </div>
+            </div>
+            <div class="center caption ">
+                <h1 class="center"> Herreria para la casa </h1>
+            </div>
+            <!-- <div id="arrow-left"  onclick= move(false)></div>
+            <div id="arrow-right" onclick= move(true) ></div> -->
         </div>
         <div class="about-us">
             
@@ -37,7 +50,7 @@
     <main>
         <section >
             <div class="gallery-cont">
-                <h1 class="title" >Algunos Trabajos</h1>
+                <a name= "trabajos"></a><h1 class="title" >Algunos Trabajos</h1>
                 <div class="gallery">
                     <div class="gallery-item">
                         <img  class="gallery-img" src="./imagenes/escalera.jpg" alt="">
@@ -139,5 +152,7 @@
             
         </div>
     </footer>
+
+    <script src="./main.js"></script>
 </body>
 </html>
