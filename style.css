@@ -43,15 +43,20 @@ header{
     }
         nav h1{
             letter-spacing: 3px;
-            font-size: 2em;
+            font-size: calc(3.5vh + .7vw);
             color: white;
+            display: block;
+            width: 20%;
         }
         .menu-toggler-img{
             height: 5vh;
         }
-        .nav-links{
-            display: none;
-        }
+            nav div{
+                display: none;
+            }
+            .nav-links{
+                display: none;
+            }
 
     .slider{
         width: 100vw;
@@ -190,6 +195,16 @@ footer{
 
 
 
+/********************************************************
+
+                      MEDIA QUERIES
+
+*********************************************************/
+
+
+
+
+
 
 
 
@@ -234,34 +249,11 @@ footer{
 
 
 @media only screen and (min-width: 768px) {
-    nav{
-        padding: 0;
-        justify-content: center;
-    }
-        nav h1{            
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .menu-toggler-img{
-            display: none;
-        }
-        .nav-links{
-            display: block;
-            text-align: center;
-            white-space: nowrap;
-            text-decoration: none;
-            font-size: 3vh;
-            color: #fafafa;
-            /* background-color: cadetblue; */
-        }
 
     .socialm{        
         margin: 5vh;
     }
-        
-
+    
     .gallery{        
         grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: .25fr;
@@ -286,6 +278,35 @@ footer{
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    nav{
+        padding: 0;
+        justify-content: center;
+    }
+        nav h1{
+        }
+        .menu-toggler-img{
+            display: none;
+        }
+        nav div{
+            display: block;
+        }
+            .nav-links{
+                position: relative;
+                right: 0;
+                display: block;
+                white-space: nowrap;
+                text-decoration: none;
+                font-size: calc(2.5vh + .3vw);
+                color: #fafafa;
+                letter-spacing: 1px;
+                width: 25%;
+                text-align: right;
+            }
+            .nav-links #right-link{
+                left: 0;
+                text-align: left;
+            }
+
     .gallery{        
         grid-template-columns: repeat(5, 1fr);
         grid-auto-rows: .4fr;
@@ -298,6 +319,15 @@ footer{
         padding: 5% 0;
         margin: 2vh;
     }
+        .iconos{
+            height: calc(8vh + 3vw);
+        }
+
+        .socialm>a{
+            margin-top: 1vh;
+            font-size: 2.8vh;
+        }
+
     .cards{
         width: 100%;
     }
