@@ -5,6 +5,12 @@
     text-align: center;
 }
 
+/* html, body{
+    overflow: hidden;
+    width:101%;
+    margin: 0px;
+    padding: 0px;
+} */
 .center{
     position: relative;
     top: 50%;
@@ -59,6 +65,7 @@ header{
             }
 
     .slider-cont{
+        position: relative;
         width: 100vw;
         height: 100vh;
     }
@@ -85,7 +92,7 @@ header{
                 }
                 .show:nth-child(2){
                     background-image: url(./imagenes/portada1.jpg);
-                    background-position: 45% 20%;
+                    background-position: 45% 40%;
                 }
                 .show:nth-child(3){
                     background-image: url(./imagenes/wp3.jpg);
@@ -98,9 +105,8 @@ header{
             top: 55%;
             padding: 3%;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.45); /* */
-            backdrop-filter: blur(7px);
-            background-size: scale(2);
+            background-color: rgba(0, 0, 0, 0.45); /* 
+            backdrop-filter: blur(7px);*/
             border: 2px solid white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
         }
@@ -115,7 +121,7 @@ header{
                 text-shadow: 0 5px 10px black ;
                 /* background-color: rgba(0, 4, 255, 0.4); */
             }
-        #arrow-left{
+        /*#arrow-left{
             height: 5vh;
             width: 5vh;
             position: absolute;
@@ -124,7 +130,7 @@ header{
             border-left: 5px solid white;
             border-bottom: 5px solid white;
             transform: translateY(-50%) rotate(45deg);
-            /* background-color: #00000050; */
+            
             cursor: pointer;
         }
         #arrow-right{
@@ -136,13 +142,37 @@ header{
             border-right: 5px solid white;
             border-bottom: 5px solid rgb(187, 153, 153);
             transform: translateY(-50%) rotate(-45deg);
-            /* background-color: #00000050; */
+            
             cursor: pointer;
+        }*/
+        .arrow-cont{
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            height: 10vh;
+            width: 10vh;
+            /*padding: 2.5vh; */
+
+            border-radius: 100%;
+            border: 2px solid white;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(3px);
+            box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.8);
         }
+            .arrow{
+                height: 5vh;
+                width: 5vh;
+                border-right: 5px solid white;
+                border-bottom: 5px solid rgb(240, 240, 240);
+                transform: rotate(45deg);
+            }
 
     .about-us{
-        width: 100%;
-        height: fit-content;/*  */
+        position: relative;
+        width: 100vw;
+        height: fit-content;
         padding: 4em 1em;
         background-color: #f5f5f5;
         display: flex;
@@ -205,10 +235,8 @@ main{
 footer{
     bottom: 0;
     width: 100vw;
-    /* height: 85vh; */
     padding: 10vh 0;
     background-color: black;
-    /* box-shadow: 0 0 20px black; */
 }
     footer>#cont-foot{
         display: flex;
@@ -226,7 +254,6 @@ footer{
             min-width: 200px;
             text-align: center;
             cursor: pointer;
-            /*background-color: violet; */
         }
 
             .iconos{
@@ -241,7 +268,6 @@ footer{
                 white-space: nowrap;
                 font-size: 4vh;
                 color: white;
-                /* background-color: yellow; */
             }
 
             #linkedin{
@@ -369,12 +395,58 @@ footer{
                 text-align: left;
             }
 
+
+
     .gallery{
         grid-template-columns: repeat(5, 1fr);
         grid-auto-rows: .4fr;
         grid-template-areas:'one two two tre fou'
                             'one fiv six six fou';
     }
+        .gallery-item{
+            position: relative;
+            border-radius: .4vw;
+            overflow: hidden;
+            box-shadow: 0 5px 15px black;
+        }
+            .gallery-img{
+                transition: 1s;
+                transform: scale(1.05);
+            }
+            .gallery-item:hover .gallery-img{ 
+                transform: scale(1.1);
+            }
+            .ventana{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.1);
+                transition: .5s;
+            }
+                .gallery-item:hover .ventana{
+                    height: 0%;
+                    padding: 48.6vh auto;
+                }
+                .gallery-item p{
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                    font-size: 4vh;
+                    color: rgb(255, 255, 255);
+                    transition: .5s;
+                    background-color: transparent;
+                    text-shadow: 0 3px 5px black;
+                }
+                    .gallery-item:hover p{
+                        color: transparent;
+                        text-shadow: none;
+                    }
+
+
+
     .socialm{
         height: 20%;
         width: 20%;
