@@ -5,12 +5,16 @@
     text-align: center;
 }
 
-/* html, body{
-    overflow: hidden;
-    width:101%;
-    margin: 0px;
-    padding: 0px;
-} */
+.not-scroll{
+    overflow: hidden; 
+    /* overflow-y: hidden;
+    overflow-x: hidden;*/
+}
+
+.scroll{
+    overflow: scroll;
+}
+
 .center{
     position: relative;
     top: 50%;

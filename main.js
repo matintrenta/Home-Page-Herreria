@@ -1,10 +1,55 @@
 slider = document.getElementsByClassName('slider')
+const item = document.getElementsByClassName('gallery-item')
+bigWindow = document.getElementsByClassName('big-window')
+backWindow = document.getElementsByClassName('back-window')
 
+
+
+numeroItem= 0
 posx= 0
 
-console.log(slider)
 
 
+//console.log(item[2].childElementCount)
+// console.log(bigWindow)
+// console.log(bigWindow[0].children[0].src)
+//console.log()
+// console.log(window)
+
+for(numeroItem; numeroItem< item.length; numeroItem+=1){
+    //console.log(numeroItem)
+
+    item[numeroItem].addEventListener('click', (e) => {
+    album = e.path[0].innerText
+    console.log('abrir el album de ' + album)
+    openGallery()
+});
+}
+
+backWindow[0].addEventListener('click', (e)=>{
+    
+    console.log(e.path[0].className)
+    if(e.path[0].className == "back-window active"){
+        closeGallery()
+    }
+    else{
+        return
+    }
+})
+
+function openGallery(){
+    bigWindow[0].classList.add('active')
+    document.children[0].classList.add('not-scroll')
+    backWindow[0].classList.add('active')
+    console.log(bigWindow[0].children[0].src)
+}
+
+function closeGallery(){
+    bigWindow[0].classList.remove('active')
+    document.children[0].classList.remove('not-scroll')
+    backWindow[0].classList.remove('active')
+    console.log(bigWindow[0].children[0].src)
+}
 
 function move(){
     
@@ -19,7 +64,5 @@ function move(){
 }
 
 
-window.setInterval(move, 4000)
-
-
-console.log(slider)
+//window.setInterval(move, 4000)
+// comentado para mejorar rendimiento durante las pruebas
