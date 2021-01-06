@@ -95,7 +95,7 @@ header{
                     position: relative;
                 }
                 .show:nth-child(2){
-                    background-image: url(./imagenes/portada1.jpg);
+                    background-image: url(./imagenes/parrillas.jpg);
                     background-position: 45% 40%;
                 }
                 .show:nth-child(3){
@@ -149,28 +149,31 @@ header{
             
             cursor: pointer;
         }*/
-        .arrow-cont{
+        /*.arrow-cont{
             position: absolute;
             top: 85%;
             left: 50%;
             transform: translateX(-50%);
 
-            height: 10vh;
-            width: 10vh;
-            /*padding: 2.5vh; */
+            height: 5vh;
+            width: 5vh;
+            padding: 2.5vh; 
 
             border-radius: 100%;
             border: 2px solid white;
             background-color: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(3px);
             box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.8);
-        }
+        }*/
             .arrow{
+                position: absolute;
+                top: 85%;
+                left: 50%;
                 height: 5vh;
                 width: 5vh;
+                transform: translateX(-50%) rotate(45deg);
                 border-right: 5px solid white;
                 border-bottom: 5px solid rgb(240, 240, 240);
-                transform: rotate(45deg);
             }
 
     .about-us{
