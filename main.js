@@ -5,12 +5,15 @@ trabajos = document.getElementsByName('trabajos')
 slider = document.getElementsByClassName('slider')
 backWindow = document.getElementsByClassName('gallery-window-cont')
 bigWindow = document.getElementsByClassName('gallery-window')
+leftArr = document.getElementById('arrow-left')
+rightArr = document.getElementById('arrow-right')
 
 
 
-numeroItem= 0
-posx= 0
-
+numeroItem = 0
+posx = 0
+images = ['escaleras', 'parrillas', 'estanterias', 'montacargas', 'portones', 'tinglados']
+stackImg = 0
 
 
 // console.log(item[2].childElementCount)
@@ -46,6 +49,16 @@ backWindow[0].addEventListener('click', (e)=>{
     }
 })
 
+leftArr.addEventListener('click', ()=>{
+    prevImg()//cambia la variable stackImg al valor anterior    
+    bigWindow[0].src= './imagenes/'+ images[stackImg] +'.jpg'
+})
+
+rightArr.addEventListener('click', ()=>{
+    nextImg()//cambia la variable stackImg al valor anterior    
+    bigWindow[0].src= './imagenes/'+ images[stackImg] +'.jpg'
+})
+
 function openGallery(imgName){
 
     //se agregan las clases
@@ -57,6 +70,7 @@ function openGallery(imgName){
 
     //y se abre la imagen pulsada
     bigWindow[0].src= './imagenes/'+ imgName.toLowerCase() +'.jpg'
+    stackImg = findImg(imgName)
 }
 
 function closeGallery(){
@@ -69,11 +83,44 @@ function closeGallery(){
 
 function move(){    
     posx+= 25
-    if(posx==75){posx= 0}
+    if(posx == 75){posx= 0}
     slider[0].style.transform= 'translateX(-' + posx + '%)'    
     console.log('imagen ' + posx/25)
 }
 
+function findImg(string){
+    
+    for (let n= 0; n< images.length; n+= 1){
+        
+        if (string == images[n]){
+            console.log(n)
+            return n
+        }
+        else n+= 1
+    }
+    console.log(n)
+}
 
-//window.setInterval(move, 4000)
-// comentado para mejorar rendimiento durante las pruebas
+function nextImg(){
+    stackImg+= 1
+
+    if (stackImg>= images.length){
+        stackImg= 0
+    } else if (stackImg< 0){
+        stackImg= images.length -1
+    }
+    console.log(stackImg)
+}
+
+function prevImg(){
+    stackImg-= 1
+
+    if (stackImg>= images.length){
+        stackImg= 0
+    } else if (stackImg< 0){
+        stackImg= images.length -1
+    }
+    console.log(stackImg)
+}
+
+//window.setInterval(move, 4000) 

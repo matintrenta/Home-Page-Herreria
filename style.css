@@ -5,6 +5,10 @@
     text-align: center;
 }
 
+html, body{
+    overflow-x: hidden;
+}
+
 .not-scroll{
     overflow: hidden; 
     /* overflow-y: hidden;
