@@ -30,13 +30,14 @@ for(numeroItem; numeroItem< item.length; numeroItem+=1){
     
     item[numeroItem].addEventListener('click', (e) => {
 
-    album = e.path[0].innerText
+    console.log(e.path[1].innerText)
+    album = e.path[1].innerText
     openGallery(album)
 });
 }
 
 backWindow[0].addEventListener('click', (e)=>{
-    
+
     if(e.path[0].className == "gallery-window-cont active"){
         closeGallery()
     }
