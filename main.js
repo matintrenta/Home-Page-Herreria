@@ -1,12 +1,12 @@
 
 const item = document.getElementsByClassName('gallery-item')
 
-trabajos = document.getElementsByName('trabajos')
+trabajos = document.getElementsByName('works')
 slider = document.getElementsByClassName('slider')
-backWindow = document.getElementsByClassName('gallery-window-cont')
-bigWindow = document.getElementsByClassName('gallery-window')
-leftArr = document.getElementById('arrow-left')
-rightArr = document.getElementById('arrow-right')
+backWindow = document.getElementsByClassName('picture-viewer')
+bigWindow = document.getElementsByClassName('picture')
+leftArr = document.getElementById('arrow--left')
+rightArr = document.getElementById('arrow--right')
 
 
 
@@ -41,7 +41,7 @@ for(numeroItem; numeroItem< item.length; numeroItem+=1){
 
 backWindow[0].addEventListener('click', (e)=>{
 
-    if(e.path[0].className == "gallery-window-cont active"){
+    if(e.path[0].className == "picture-viewer active"){
         closeGallery()
     }
     else{
@@ -64,7 +64,7 @@ function openGallery(imgName){
     //se agregan las clases
     window.scrollTo(0, trabajos[0].offsetTop)
     bigWindow[0].classList.add('active')
-    document.children[0].classList.add('not-scroll')
+    document.children[0].classList.add('--not-scroll')
     backWindow[0].classList.add('active')
 
 
@@ -77,7 +77,7 @@ function closeGallery(){
 
     //se remueven las clases
     bigWindow[0].classList.remove('active')
-    document.children[0].classList.remove('not-scroll')
+    document.children[0].classList.remove('--not-scroll')
     backWindow[0].classList.remove('active')
 }
 

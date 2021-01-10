@@ -1,4 +1,4 @@
-.gallery-cont{
+.cont-of-gallery{
     padding: 7.5% 0;
     margin: auto;
     width: 85%;
@@ -53,14 +53,14 @@
         .gallery-item:nth-child(6){
             grid-area: six;
         }
-            .gallery-img{
+            .gallery-item__img{
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
             }
 
     
-    .gallery-window-cont{
+    .picture-viewer{
         display: none;
         position: fixed;
         top: 12vh;
@@ -71,7 +71,7 @@
         background: rgba(0, 0, 0, 0.5);
         cursor: pointer;
     }
-        .gallery-window{
+        .picture{
             display: none;
             position: fixed;
             top: 57%;
@@ -90,7 +90,7 @@
             transition: .5s;
             cursor: auto;
         }
-        #arrow-left{
+        #arrow--left{
             height: 5vh;
             width: 5vh;
             position: fixed;
@@ -101,7 +101,7 @@
             transform: translateY(-50%) rotate(45deg);
             cursor: pointer;
         }
-        #arrow-right{
+        #arrow--right{
             height: 5vh;
             width: 5vh;
             position: fixed;

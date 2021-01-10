@@ -1,0 +1,231 @@
+
+
+
+
+
+/*########          SUPER-SMALL DEVICES          ########*/
+
+@media only screen and (min-width: 425px) {
+    .gallery{
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: .4fr;
+        grid-template-areas:'two two fou'
+                            'one fiv fou'
+                            'one tre fou'
+                            'one six six';
+    }
+    .socialm{
+        width: 35%;
+    }
+    .card-item{
+        width: 85%;
+        max-width: 270px;
+        padding: 4vh 1.5vw;
+        padding-bottom: 3vh;
+    }
+        .card-item>p{
+            margin: 3vh 15%;
+            max-width: 70%;
+        }
+}
+
+
+
+
+
+
+/*########          SMALL DEVICES          ########*/
+
+@media only screen and (min-width: 600px){
+    .cards{
+        width: 90%;
+    }
+        .card-item{
+            width: 45%;
+            max-width: 300px;
+        }
+}
+
+
+
+
+
+
+/*########          TABLETS          ########*/
+
+@media only screen and (min-width: 768px) {
+
+    .socialm{
+        margin: 5vh;
+    }
+
+    .gallery{
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: .25fr;
+        grid-template-areas:'two two two fou'
+                            'one fiv tre fou'
+                            'one six six six';
+        overflow: hidden;
+    }
+
+    .cards{
+        width: 90%;
+    }
+        .card-item{
+            width: 45%;
+            max-width: 350px;
+        }
+        #last-card{
+            display: flex;
+        }
+}
+
+
+
+
+
+
+/*########          LAPTOP \ DESKTOP          ########*/
+
+@media only screen and (min-width: 992px) {
+
+    nav{
+        padding: 0;
+        justify-content: center;
+    }
+        /* nav h1{
+        } */
+        .menu-toggler-img{
+            display: none;
+        }
+        nav div{
+            display: block;
+        }
+            .nav-links{
+                position: relative;
+                right: 0;
+                display: block;
+                white-space: nowrap;
+                text-decoration: none;
+                font-size: calc(2.5vh + .3vw);
+                color: #fafafa;
+                letter-spacing: 1px;
+                width: 25%;
+                text-align: right;
+            }
+            .nav-links #right-link{
+                left: 0;
+                text-align: left;
+            }
+
+    .gallery{
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: .4fr;
+        grid-template-areas:'one two two tre fou'
+                            'one fiv six six fou';
+    }
+        .gallery-item{
+            position: relative;
+            border-radius: .4vw;
+            overflow: hidden;
+            box-shadow: 0 5px 15px black;
+        }
+            .gallery-img{
+                transition: 1s;
+                transform: scale(1.05);
+            }
+            .gallery-item:hover .gallery-img{ 
+                transform: scale(1.1);
+            }
+            .ventana{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.1);
+                transition: .5s;
+            }
+                .gallery-item:hover .ventana{
+                    height: 0%;
+                    padding: 48.6vh auto;
+                }
+                .gallery-item p{
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                    font-size: 4vh;
+                    color: rgb(255, 255, 255);
+                    transition: .5s;
+                    background-color: transparent;
+                    text-shadow: 0 3px 5px black;
+                }
+                    .gallery-item:hover p{
+                        color: transparent;
+                        text-shadow: none;
+                    }
+
+    .socialm{
+        height: 20%;
+        width: 20%;
+        padding: 5% 0;
+        margin: 2vh;
+    }
+        .iconos{
+            height: calc(8vh + 3vw);
+        }
+
+        .socialm>a{
+            margin-top: 1vh;
+            font-size: 3vh;
+        }
+
+    .cards{
+        width: 100%;
+    }
+    #last-card{
+        display: none;
+    }
+    .card-item{
+        width:24%;
+        max-width: 300px;
+        border-radius: 2vh;
+        background-color: rgb(246, 246, 246);
+        box-shadow: 0 1.5vh 2vh rgb(37, 37, 37);
+        /* padding: 10vh auto; */
+    }
+        .card-item>p{
+            max-width: 85%;
+            margin: auto 7.5%;
+        }
+        .card-item>img{
+            height: 8vh;
+            width: 8vh;
+            border: .2vw solid rgb(211, 211, 211);
+        }
+            .card-item>a>img{
+                height: 3vh;
+                margin: .5vw;
+            }
+}
+
+
+
+
+
+
+/*########          BIG-DESKTOP          ########*/
+
+@media only screen and (min-width: 1200px){
+    #last-card{
+        display: flex;
+    }
+    .card-item{
+        width: 20%;
+        max-width: none;
+        border-radius: 3vh;
+        font-size: calc(1vh + .5vw);
+    }
+
+}

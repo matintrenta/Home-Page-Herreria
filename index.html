@@ -1,155 +1,243 @@
+
+
+
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="gallery.css">
-    <link rel="stylesheet" href="cards.css">
-    <!-- <link rel="stylesheet" href="responsive.css"> -->
-    <link rel="stylesheet" href="style.css">
-    <title>Herreria</title>
-</head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+
+
+        <!--        APIS        -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        
+
+        
+        <!--        STYLE-SHEETS      -->
+
+        <link rel="stylesheet" href="gallery.css">
+        <link rel="stylesheet" href="cards.css">        
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="adaptive-design.css"> -->
+
+        
+
+        <title>Herreria</title>
+
+
+    </head>
+
+
+
+
+
+
+
+
+
+
 <body>
     
     <header>
+
+
+
+
+        <!--         NAV         -->
         <nav>
-                <div><a class="nav-links" href="#trabajos">Trabajos Realizados</a></div>
-                <h1 >Herreria</h1>
-                <div><a id="right-link" class="nav-links" href="#datos">Cómo Contactarnos</a></div>
-                <img class="menu-toggler-img" src="./imagenes/menu.png"alt="">
-            
+            <div class="link--sizer"><a class="nav-links" href="#works">Trabajos Realizados</a></div>
+            <h1>   Herreria    </h1>
+            <div class="link--sizer"><a class="nav-links" href="#call" id="right-link">Cómo Contactarnos</a></div>
+            <img class="menu-toggler" src="./imagenes/menu.png"alt="">
         </nav>
-        <div class="slider-cont">
-            <div class="center window ">
+
+
+
+
+
+        <!--         SLIDER         -->
+        <div class="supercont-of-slider">
+
+            <div class="--center cont-of-slider">
                 <div class="slider">
-                    <div class="show"></div>
-                    <div class="show"></div>
-                    <div class="show"></div>
-                    <div class="show"></div>
+                    <div class="slider-screen"></div>
+                    <div class="slider-screen"></div>
+                    <div class="slider-screen"></div>
+                    <div class="slider-screen"></div>
                 </div>
             </div>
-            <div class="center caption ">
-                <h1 class="center"> Herreria para la casa </h1>
+
+            <div class="--center caption">
+                <h1 class="--center"> Herreria para la casa </h1>
             </div>
-            <div class=" arrow"><!-- <div> </div>--></div>
-            <!--<div class="arrow-cont"></div>
-             <div id="arrow-left"  onclick= move(false)></div>
-            <div id="arrow-right" onclick= move(true) ></div> -->
+
+            <div class="arrow--down"></div>
+            <!-- <div class="cont-of-arrows"></div>
+            <div id="slider-arrow--left"  onclick= move(false)></div>
+            <div id="slider-arrow--right" onclick= move(true) ></div> -->
         </div>
-        <div class="about-us">
-            
-            <div class="context">
+
+
+
+
+
+        <!--         ABOUT         -->
+        <article class="article-about">            
+            <div class="about-context">
                 <h1>Quienes somos y qué hacemos</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quasi tenetur illum itaque soluta modi possimus dolorum, iure dolorem necessitati bus est natus ex quos nobis labore laboriosam eveniet eum omnis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quae repudiandae ex expedita, debitis, consequatur quidem sunt, sint neque dolor quibusdam. Animi facere nobis amet dolor sed iste fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae dolore corporis neque maiores consequuntur aliquam facere quo accusantium laborum sint optio aliquid nisi molestiae, unde enim vel. Optio, sunt voluptatibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, itaque earum. Aliquid ipsum ipsa ullam? Voluptates delectus assumenda repudiandae ullam reprehenderit quod facilis enim nesciunt alias iusto, debitis suscipit natus!</p>
                 <h4>Aclaracion</h4>
             </div>
-        </div>
+        </article>
+
     </header>
 
+
+
+
+
+
     <main>
-        <section >
-            <div class="gallery-cont">
-                <a name= "trabajos"></a><h1 class="title" >Algunos Trabajos</h1>
+
+        
+        <!--         GALLERY         -->
+        <section>
+
+            <div class="cont-of-gallery">
+
+                <a name="works">    <h1 class="section-title">Algunos Trabajos</h1>    </a>
+
+
                 <div class="gallery">
+
                     <div class="gallery-item">
-                        <img  class="gallery-img" src="./imagenes/escaleras.jpg" alt="">
+                        <img  class="gallery-item__img" src="./imagenes/escaleras.jpg" alt="">
                         <div class="ventana"><p>Escaleras</p></div>
                     </div> 
+
                     <div class="gallery-item">
-                        <img  class="gallery-img" src="./imagenes/parrillas.jpg" alt=""> 
+                        <img  class="gallery-item__img" src="./imagenes/parrillas.jpg" alt=""> 
                         <div class="ventana"><p>Parrillas</p></div>
                     </div>
-                    <div class="gallery-item" name="nameatr" >
-                        <img  class="gallery-img" src="./imagenes/estanterias.jpg" alt=""> 
+
+                    <div class="gallery-item">
+                        <img  class="gallery-item__img" src="./imagenes/estanterias.jpg" alt=""> 
                         <div class="ventana"><p>Estanterias</p></div>
                     </div>
+
                     <div class="gallery-item">
-                        <img  class="gallery-img" src="./imagenes/montacargas.jpg" alt="">
+                        <img  class="gallery-item__img" src="./imagenes/montacargas.jpg" alt="">
                         <div class="ventana"><p>Montacargas</p></div>
                     </div>
+
                     <div class="gallery-item">
-                        <img  class="gallery-img" src="./imagenes/portones.jpg" alt="">
+                        <img  class="gallery-item__img" src="./imagenes/portones.jpg" alt="">
                         <div class="ventana"><p>Portones</p></div>
                     </div>
+
                     <div class="gallery-item">
-                        <img  class="gallery-img" src="./imagenes/tinglados.jpg" alt="">
+                        <img  class="gallery-item__img" src="./imagenes/tinglados.jpg" alt="">
                         <div class="ventana"><p>Tinglados</p></div>
                     </div>
                 </div>
 
-                <div class="gallery-window-cont">
-                    <img class="gallery-window" src="">
-                        <!-- <img src="./imagenes/portada1.jpg" alt=""> -->
-                    </img>
-                    <div id="arrow-left"  ></div>
-                    <div id="arrow-right" ></div>
+                <div class="picture-viewer">
+                    <img class="picture" src=""></img>
+                    <div id="arrow--left"  ></div>
+                    <div id="arrow--right" ></div>
                 </div>
             </div>
+
         </section>
-        <section class="cards-cont">
-            <h1 class="title" >Nuestros Clientes</h1>
-            <div class="cards">
-                <div class="card-item">
+
+
+
+
+
+
+        <!--         CLIENT CARDS         -->
+        <section class="supercont-of-cards">
+
+            <h1 class="section-title" >Nuestros Clientes</h1>
+
+
+            <div class="cont-of-cards">
+
+                <div class="card">
+
                     <img src="./imagenes/perfil1.jpg" alt="">
-                    <a href="http://">
-                            <img src="./imagenes/instagram1.png" alt="">
-                            <p>@inst.profile</p>
-                    </a>
+                    <a href="#"><h4>    Marcos    </h4></a>
+
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, minus fugit recusandae voluptas ex hic architecto eos officiis dolorem nobis tenetur aliquam maiores amet quia esse nulla.</p>
+                    <!--<a href="#"><img src="./imagenes/instagram1.png" alt=""><p>@inst.profile</p></a>-->
                 </div>
-                <div class="card-item">
+
+                <div class="card">
+
                     <img src="./imagenes/perfil2.jpeg" alt="">
-                    <a href="http://">
-                            <img src="./imagenes/instagram1.png" alt="">
-                            <p>@inst.profile</p>
-                    </a>
+                    <a href="#"><h4>    Andres  </h4></a>
+
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, minus fugit recusandae voluptas ex hic architecto eos officiis dolorem nobis tenetur aliquam maiores amet quia esse nulla. eos officiis dolorem nobis tenetur aliquam maiores amet quia esse nulla.</p>
                 </div>
-                <div class="card-item">
+
+                <div class="card">
+
                     <img src="./imagenes/perfil3.jpg" alt="">
-                    <a href="http://">
-                            <img src="./imagenes/instagram1.png" alt="">
-                            <p>@inst.profile</p>
-                    </a>
+                    <a href="#"><h4>    Alicia    </h4></a>
+
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, minus fugit recusandae voluptas ex hic architecto eos officiis dolorem nobis tenetur aliquam maiores amet quia esse nulla.eos officiis dolorem nobis.</p>
                 </div>
-                <div class="card-item" id="last-card">
+
+                <div class="card" id="card--last">
+
                     <img src="./imagenes/perfil3.jpg" alt="">
-                    <a href="http://">
-                            <img src="./imagenes/instagram1.png" alt="">
-                            <p>@inst.profile</p>
-                    </a>
+                    <a href="#"><h4>    Alicia    </h4></a>
+
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, minus fugit recusandae voluptas ex hic architecto eos officiis dolorem nobis tenetur aliquam maiores amet quia esse nulla.eos officiis dolorem nobis.</p>
                 </div>
             </div>
+
         </section>
     </main>
+
+
+
+
+
+
+    <!--         CONTACT         -->
     <footer>        
-        <a name="datos"> <h2 class="title" >Contacto</h2> </a>
-        <div id="cont-foot" >
+
+        <a name="call"> <h2 class="section-title" >Contacto</h2> </a>
+
+
+        <div class="cont-of-socialm" >
 
             <div class="socialm" >
                 <img class="iconos" id="linkedin" src="./imagenes/linkedin.png" alt="">
                 <a href="">linkedin.profile</a>
             </div>
+
             <div class="socialm" >
                 <img class="iconos" src="./imagenes/instagram.png" alt="">
                 <a href="">instagram.profile</a>
             </div>
+
             <div class="socialm" >
                 <img class="iconos" src="./imagenes/whatsapp.png" alt="">
                 <a href="">+54 1145679876</a>
             </div>
+
             <div class="socialm" >
                 <img class="iconos" src="./imagenes/gmail.png" alt="">
                 <a href="">correo@gmail.com</a>
             </div>
-
-            <!--
-            <form class="form-consulta" > 
+            
+            <!--<form class="form-consulta" > 
                 <img class="iconos" id="gmail" src="./imagenes/gmail.png" alt="">
                 <input class="datos" type="text"  placeholder="¿Cómo te puedo llamar? (Apodo o nombre)">
                 <input class="datos" type="email" placeholder="¿A qué email te respondo?">
@@ -157,12 +245,11 @@
                             placeholder="Dime tu consulta">
                 </textarea>
                 <input class="send-btn" type="button" value="Enviar Correo">
-            </form>
-            -->
-            
+            </form>-->           
         </div>
     </footer>
 
     <script src="./main.js"></script>
+
 </body>
 </html>
