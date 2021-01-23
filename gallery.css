@@ -53,10 +53,14 @@
         .gallery-item:nth-child(6){
             grid-area: six;
         }
-            .gallery-item__img{
+            .gallery-item-img{
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+                transition: 200ms;
+            }
+            .gallery-item:hover>.gallery-item-img{
+                transform: scale(1.08);
             }
 
     
